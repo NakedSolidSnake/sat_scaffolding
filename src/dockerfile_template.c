@@ -5,7 +5,7 @@
 
 static const char *content = 
 {
-    "FROM ubuntu\n\n"
+    "FROM ubuntu:22.04\n\n"
     "RUN apt-get update && \\\n"
     "    apt-get install \\\n"
     "    cmake \\\n"
