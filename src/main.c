@@ -4,6 +4,7 @@
 #include <stdbool.h>
 
 #include <minimal.h>
+#include <library.h>
 
 static void print_help (const char *program_name)
 {
@@ -41,7 +42,9 @@ int main (int argc, char *argv [])
     }
     else if (strcmp (argv [1], "--library") == 0 || strcmp (argv [1], "-l") == 0)
     {
-        // Library creation logic would go here
+        int argc_offset = 2;
+
+        library_create (argv [0], argc - argc_offset, argv + argc_offset);
     }
     else
     {
