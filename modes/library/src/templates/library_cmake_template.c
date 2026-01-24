@@ -10,6 +10,7 @@ const char *library_cmake_template =
     "set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)\n"
     "set (LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)\n"
     "set (CMAKE_BUILD_TYPE Debug)\n"
+    "enable_testing ()\n"
     "\n"
     "add_library (%s %s \"\")\n"
     "\n"
@@ -20,7 +21,10 @@ const char *library_cmake_template =
      "target_include_directories (%s\n"
     "  PUBLIC\n"
     "  ${CMAKE_CURRENT_LIST_DIR}/include\n"
-    ")\n";
+    ")\n"
+    "\n"
+    "add_subdirectory (tests)\n";
+    ;
 
 bool library_cmake_template_create (const char *const project_name, const char *const type)
 {

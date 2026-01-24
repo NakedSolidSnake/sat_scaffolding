@@ -64,6 +64,24 @@ bool library_create_project_dir (const char *const type, const char *const path,
         return false;
     }
 
+    if (mkdir ("tests", 0755) != 0)
+    {
+        fprintf (stderr, "Failed to create tests directory\n");
+        return false;
+    }
+
+    if (library_tests_template_create (project_name) == false)
+    {
+        fprintf (stderr, "Failed to create tests/%s_test.c\n", project_name);
+        return false;
+    }
+
+    if (library_tests_cmake_template_create (project_name) == false)
+    {
+        fprintf (stderr, "Failed to create tests/CMakeLists.txt\n");
+        return false;
+    }
+
     fprintf (stdout, "Library project '%s' created successfully at %s\n", project_name, folder);
 
     return true;

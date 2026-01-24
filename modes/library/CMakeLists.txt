@@ -8,6 +8,8 @@ target_sources (library
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/library_cmake_template.c
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/library_gitignore_template.c
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/library_include_template.c
+    ${CMAKE_CURRENT_LIST_DIR}/src/templates/library_tests_template.c
+    ${CMAKE_CURRENT_LIST_DIR}/src/templates/library_tests_cmake_template.c
 )
 
 target_include_directories (library

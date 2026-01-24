@@ -1,26 +1,27 @@
 #include <library_templates.h>
 #include <stdio.h>
 
-#define LIBRARY_FILENAME       "src/%s.c"
+#define TESTS_FILENAME       "tests/%s_test.c"
 
 static const char *content = 
 {
     "#include <%s.h>\n"
     "#include <stdio.h>\n"
     "#include <stdlib.h>\n\n"
-    "int %s_function (void)\n"
+    "int main (void)\n"
     "{\n"
-    "    printf (\"Hello World!\\n\");\n\n"
-    "    return 0;\n"
+    "    printf (\"Running tests for %s library...\\n\");\n\n"
+    "    // Add test cases here\n\n"
+    "    return EXIT_SUCCESS;\n"
     "}\n"
 };
 
-bool library_template_create (const char *const project_name)
+bool library_tests_template_create (const char *const project_name)
 {
     bool status = false;
 
     char buffer [256] = {0};
-    snprintf (buffer, 255, LIBRARY_FILENAME, project_name);
+    snprintf (buffer, 255, TESTS_FILENAME, project_name);
 
     FILE *file = fopen (buffer, "w");
     if (file != NULL)

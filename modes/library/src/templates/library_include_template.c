@@ -9,7 +9,7 @@ static const char *content =
 {
     "#ifndef %s_H\n"
     "#define %s_H\n\n"
-    "void %s_function (void);\n\n"
+    "int %s_function (void);\n\n"
     "#endif /* %s_H */\n"
 };
 
