@@ -8,12 +8,11 @@ bool minimal_create (const char *application, int argc, char *argv [])
     {
         fprintf (stderr, "Invalid arguments for minimal_create\n");
         fprintf (stderr, "Usage: %s --minimal <path> <project_name>\n", application);
+        return false;
     }
 
     char *path = argv [0];
     char *project_name = argv [1];
 
-    minimal_create_project_dir (path, project_name);
-
-    return true;
+    return minimal_create_project_dir (path, project_name);
 }

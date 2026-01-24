@@ -52,5 +52,7 @@ bool minimal_create_project_dir (const char *const path, const char *const proje
         return false;
     }
 
+    fprintf (stdout, "Minimal project '%s' created successfully at %s\n", project_name, folder);
+
     return true;
 }
