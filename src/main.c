@@ -5,12 +5,13 @@
 
 #include <minimal.h>
 #include <library.h>
+#include <full.h>
 
 static void print_help (const char *program_name)
 {
     printf ("Usage: %s <mode>\n", program_name);
     printf ("Modes:\n");
-    printf ("  --project   Create a full project scaffolding\n");
+    printf ("  --full      Create a full project scaffolding\n");
     printf ("  --minimal   Create a minimal scaffolding\n");
     printf ("  --library   Create a library scaffolding\n");
 }
@@ -30,9 +31,11 @@ int main (int argc, char *argv [])
         print_help (argv [0]);
     }
 
-    else if (strcmp (argv [1], "--project") == 0 || strcmp (argv [1], "-p") == 0)
+    else if (strcmp (argv [1], "--full") == 0 || strcmp (argv [1], "-p") == 0)
     {
         // Full project creation logic would go here
+        int argc_offset = 2;
+        full_create (argv [0], argc - argc_offset, argv + argc_offset);
     }
     else if (strcmp (argv [1], "--minimal") == 0 || strcmp (argv [1], "-m") == 0)
     {
