@@ -1,11 +1,10 @@
-#include <full_directories.h>
-#include <full_templates.h>
+#include <adapters_directory.h>
 #include <stdio.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
 
-bool full_adapters_directories_create (const char *const root_folder)
+bool adapters_directories_create (const char *const root_folder)
 {
     char path [1024] = {0};
     snprintf (path, 1023, "%s/adapters", root_folder);

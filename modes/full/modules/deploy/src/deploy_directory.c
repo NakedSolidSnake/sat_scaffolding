@@ -1,11 +1,10 @@
-#include <full_directories.h>
-#include <full_templates.h>
+#include <deploy_directory.h>
 #include <stdio.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
 
-bool full_deploy_directories_create (const char *const root_folder)
+bool deploy_directories_create (const char *const root_folder)
 {
     char path [1024] = {0};
     snprintf (path, 1023, "%s/deploy", root_folder);

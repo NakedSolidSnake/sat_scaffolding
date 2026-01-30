@@ -1,11 +1,10 @@
-#include <full_directories.h>
-#include <full_templates.h>
+#include <domain_directory.h>
 #include <stdio.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
 
-bool full_domain_directories_create (const char *const root_folder)
+bool domain_directories_create (const char *const root_folder)
 {
     char path [1024] = {0};
     snprintf (path, 1023, "%s/domain", root_folder);

@@ -1,5 +1,14 @@
 #include <full_directories.h>
 #include <full_templates.h>
+#include <adapters_directory.h>
+#include <application_directory.h>
+#include <cmd_directory.h>
+#include <common_directory.h>
+#include <config_directory.h>
+#include <deploy_directory.h>
+#include <domain_directory.h>
+#include <resources_directory.h>
+#include <tools_directory.h>
 #include <stdio.h>
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -16,47 +25,47 @@ bool full_create_project_dir (const char *const path, const char *const project_
         return false;
     }
 
-    if (full_adapters_directories_create (folder) == false)
+    if (adapters_directories_create (folder) == false)
     {
         return false;
     }
 
-    if (full_application_directories_create (folder) == false)
+    if (application_directories_create (folder) == false)
     {
         return false;
     }
 
-    if (full_cmd_directories_create (folder) == false)
+    if (cmd_directories_create (folder) == false)
     {
         return false;
     }
 
-    if (full_common_directories_create (folder) == false)
+    if (common_directories_create (folder) == false)
     {
         return false;
     }
 
-    if (full_config_directories_create (folder) == false)
+    if (config_directories_create (folder) == false)
     {
         return false;
     }
 
-    if (full_deploy_directories_create (folder) == false)
+    if (deploy_directories_create (folder) == false)
+    {
+        return false;
+    }
+    
+    if (domain_directories_create (folder) == false)
     {
         return false;
     }
 
-    if (full_domain_directories_create (folder) == false)
+    if (resources_directories_create (folder) == false)
     {
         return false;
     }
 
-    if (full_resources_directories_create (folder) == false)
-    {
-        return false;
-    }
-
-    if (full_tools_directories_create (folder) == false)
+    if (tools_directories_create (folder) == false)
     {
         return false;
     }

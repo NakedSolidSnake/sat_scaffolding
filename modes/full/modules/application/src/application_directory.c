@@ -1,11 +1,10 @@
-#include <full_directories.h>
-#include <full_templates.h>
+#include <application_directory.h>
 #include <stdio.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
 
-bool full_application_directories_create (const char *const root_folder)
+bool application_directories_create (const char *const root_folder)
 {
     char path [1024] = {0};
     snprintf (path, 1023, "%s/application", root_folder);
