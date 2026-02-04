@@ -4,7 +4,6 @@
 #include <application_directory.h>
 #include <cmd_directory.h>
 #include <common_directory.h>
-#include <config_directory.h>
 #include <deploy_directory.h>
 #include <domain_directory.h>
 #include <resources_directory.h>
@@ -41,11 +40,6 @@ bool full_create_project_dir (const char *const path, const char *const project_
     }
 
     if (common_directories_create (folder) == false)
-    {
-        return false;
-    }
-
-    if (config_directories_create (folder) == false)
     {
         return false;
     }

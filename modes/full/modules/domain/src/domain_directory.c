@@ -23,6 +23,22 @@ bool domain_directories_create (const char *const root_folder)
         return false;
     }
 
+    snprintf (path, 1023, "%s/domain/models/entities", root_folder);
+
+    if (mkdir (path, 0755) != 0)
+    {
+        fprintf (stderr, "Failed to create domain/models/entities directory: %s\n", path);
+        return false;
+    }
+
+    snprintf (path, 1023, "%s/domain/models/value_objects", root_folder);
+
+    if (mkdir (path, 0755) != 0)
+    {
+        fprintf (stderr, "Failed to create domain/models/value_objects directory: %s\n", path);
+        return false;
+    }
+
     snprintf (path, 1023, "%s/domain/ports", root_folder);
 
     if (mkdir (path, 0755) != 0)

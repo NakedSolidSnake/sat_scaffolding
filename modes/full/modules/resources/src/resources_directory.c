@@ -15,5 +15,21 @@ bool resources_directories_create (const char *const root_folder)
         return false;
     }
 
+    snprintf (path, 1023, "%s/resources/assets", root_folder);
+
+    if (mkdir (path, 0755) != 0)
+    {
+        fprintf (stderr, "Failed to create resources/assets directory: %s\n", path);
+        return false;
+    }
+
+    snprintf (path, 1023, "%s/resources/properties", root_folder);
+
+    if (mkdir (path, 0755) != 0)
+    {
+        fprintf (stderr, "Failed to create resources/properties directory: %s\n", path);
+        return false;
+    }
+
     return true;
 }

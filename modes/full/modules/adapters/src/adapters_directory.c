@@ -15,10 +15,10 @@ bool adapters_directories_create (const char *const root_folder)
         return false;
     }
 
-    snprintf (path, 1023, "%s/adapters/controllers", root_folder);
+    snprintf (path, 1023, "%s/adapters/factories", root_folder);
     if (mkdir (path, 0755) != 0)
     {
-        fprintf (stderr, "Failed to create adapters/controllers directory: %s\n", path);
+        fprintf (stderr, "Failed to create adapters/factories directory: %s\n", path);
         return false;
     }
 
@@ -26,6 +26,20 @@ bool adapters_directories_create (const char *const root_folder)
     if (mkdir (path, 0755) != 0)
     {
         fprintf (stderr, "Failed to create adapters/repositories directory: %s\n", path);
+        return false;
+    }
+
+    snprintf (path, 1023, "%s/adapters/ports", root_folder);
+    if (mkdir (path, 0755) != 0)
+    {
+        fprintf (stderr, "Failed to create adapters/ports directory: %s\n", path);
+        return false;
+    }
+
+    snprintf (path, 1023, "%s/adapters/config", root_folder);
+    if (mkdir (path, 0755) != 0)
+    {
+        fprintf (stderr, "Failed to create adapters/config directory: %s\n", path);
         return false;
     }
 

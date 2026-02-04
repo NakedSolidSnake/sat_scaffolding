@@ -19,7 +19,6 @@ target_link_libraries (full
     application
     cmd
     common
-    config
     deploy
     domain
     resources
