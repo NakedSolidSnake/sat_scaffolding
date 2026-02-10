@@ -7,5 +7,6 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set (LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
 set (CMAKE_BUILD_TYPE Debug)
 
+add_subdirectory (shared)
 add_subdirectory (modes)
 add_subdirectory (src)

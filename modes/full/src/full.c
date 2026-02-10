@@ -1,5 +1,5 @@
 #include <full.h>
-#include <full_directories.h>
+#include <full_root_directories.h>
 #include <stdio.h>
 
 bool full_create (const char *application, int argc, char *argv [])
@@ -14,5 +14,16 @@ bool full_create (const char *application, int argc, char *argv [])
     char *path = argv [0];
     char *project_name = argv [1];
 
-    return full_create_project_dir (path, project_name);
+    if (full_create_project_dir (path, project_name) == false)
+    {
+        // fprintf (stdout, "Full project '%s' cannot be created\n", project_name);
+
+        // system ("rm -rf %s/%s", path, project_name);
+
+        return false;
+    }
+
+    fprintf (stdout, "Full project '%s' created successfully\n", project_name);
+
+    return true;
 }

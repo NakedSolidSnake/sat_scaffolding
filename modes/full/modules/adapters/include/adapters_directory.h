@@ -3,6 +3,6 @@
 
 #include <stdbool.h>
 
-bool adapters_directories_create (const char *const root_folder);
+bool adapters_directories_create (const char *const base_folder);
 
 #endif /* ADAPTERS_DIRECTORY_H */
