@@ -3,6 +3,7 @@
 #include <full_application_directories.h>
 #include <full_common_directories.h>
 #include <full_domain_directories.h>
+#include <full_root_templates.h>
 #include <stdio.h>
 #include <shared.h>
 
@@ -48,6 +49,11 @@ bool full_source_directory_create (const char *const base_folder, const char *co
     }
 
     if (full_domain_directory_create (folder, project_name) == false)
+    {
+        return false;
+    }
+
+    if (full_root_cmake_source_template_create (folder) == false)
     {
         return false;
     }

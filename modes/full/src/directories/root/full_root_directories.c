@@ -2,6 +2,7 @@
 #include <full_source_directories.h>
 #include <full_resources_directories.h>
 #include <full_tools_directories.h>
+#include <full_root_templates.h>
 #include <stdio.h>
 #include <shared.h>
 
@@ -44,6 +45,31 @@ bool full_create_project_dir (const char *const path, const char *const project_
     }
 
     if (full_tools_directory_create (folder, project_name) == false)
+    {
+        return false;
+    }
+
+    if (full_root_gitignore_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (full_root_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (full_root_dockerfile_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (full_root_docker_compose_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (full_root_readme_template_create (folder) == false)
     {
         return false;
     }
