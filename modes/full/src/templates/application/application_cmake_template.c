@@ -6,6 +6,7 @@
 static const char *const content =
 "add_subdirectory (context)\n"
 "add_subdirectory (services)\n"
+"add_subdirectory (tests)\n"
 "\n"
 "add_library (application INTERFACE)\n"
 "\n"

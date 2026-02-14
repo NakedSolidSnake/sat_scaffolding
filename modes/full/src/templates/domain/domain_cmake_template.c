@@ -8,6 +8,7 @@ static const char *const content =
 "add_subdirectory (ports)\n"
 "add_subdirectory (services)\n"
 "add_subdirectory (value_objects)\n"
+"add_subdirectory (tests)\n"
 "\n"
 "add_library (domain INTERFACE)\n"
 "\n"

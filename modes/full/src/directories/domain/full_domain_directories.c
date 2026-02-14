@@ -21,6 +21,7 @@ bool full_domain_directory_create (const char *const base_folder, const char *co
         { .base_dir = folder, .target_dir = "value_objects" },
         { .base_dir = folder, .target_dir = "value_objects/include" },
         { .base_dir = folder, .target_dir = "value_objects/src" },
+        { .base_dir = folder, .target_dir = "tests" },
     };
 
     directory_target_list_t target_list = 
@@ -70,6 +71,16 @@ bool full_domain_directory_create (const char *const base_folder, const char *co
     }
 
     if (domain_value_objects_source_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (domain_tests_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (domain_tests_source_template_create (folder) == false)
     {
         return false;
     }

@@ -11,5 +11,7 @@ bool domain_services_cmake_template_create (const char *const root_folder);
 bool domain_services_source_template_create (const char *const root_folder);
 bool domain_value_objects_cmake_template_create (const char *const root_folder);
 bool domain_value_objects_source_template_create (const char *const root_folder);
+bool domain_tests_cmake_template_create (const char *const root_folder);
+bool domain_tests_source_template_create (const char *const root_folder);
 
 #endif /* DOMAIN_TEMPLATES_H */

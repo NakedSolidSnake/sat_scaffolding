@@ -38,6 +38,8 @@ target_sources (full
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/domain/domain_value_objects_cmake_template.c
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/domain/domain_value_objects_source_template.c
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/domain/domain_ports_cmake_template.c
+    ${CMAKE_CURRENT_LIST_DIR}/src/templates/domain/domain_tests_cmake_template.c
+    ${CMAKE_CURRENT_LIST_DIR}/src/templates/domain/domain_tests_source_template.c
 
 
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/common/common_cmake_template.c
@@ -52,6 +54,8 @@ target_sources (full
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/application/application_context_source_template.c
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/application/application_services_cmake_template.c
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/application/application_services_source_template.c
+    ${CMAKE_CURRENT_LIST_DIR}/src/templates/application/application_tests_cmake_template.c
+    ${CMAKE_CURRENT_LIST_DIR}/src/templates/application/application_tests_source_template.c
 
 )
 
