@@ -3,6 +3,25 @@
 
 #define FILENAME "CMakeLists.txt"
 
+static const char *const content =
+"add_library (common \"\")\n"
+"\n"
+"target_sources (common \n"
+"    PRIVATE\n"
+"    # Put here your common source files\n"
+"    ${CMAKE_CURRENT_LIST_DIR}/src/my_common.c\n"
+")\n"
+"\n"
+"target_include_directories (common \n"
+"    PUBLIC\n"
+"    ${CMAKE_CURRENT_LIST_DIR}/include\n"
+")\n"
+"\n"
+"target_link_libraries (common\n"
+"    PRIVATE\n"
+"    # Put here your libraries to link\n"
+")\n";
+
 bool common_cmake_template_create (const char *const root_folder)
 {
     char filename [512];
@@ -15,6 +34,8 @@ bool common_cmake_template_create (const char *const root_folder)
     {
         return false;
     }
+
+    fprintf (file, "%s", content);
 
     fclose (file);
 

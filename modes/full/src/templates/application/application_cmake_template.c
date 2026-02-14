@@ -3,6 +3,18 @@
 
 #define FILENAME "CMakeLists.txt"
 
+static const char *const content =
+"add_subdirectory (context)\n"
+"add_subdirectory (services)\n"
+"\n"
+"add_library (application INTERFACE)\n"
+"\n"
+"target_link_libraries (application \n"
+"    INTERFACE\n"
+"    context\n"
+"    application_services\n"
+")\n";
+
 bool application_cmake_template_create (const char *const root_folder)
 {
     char filename [512];
@@ -15,6 +27,8 @@ bool application_cmake_template_create (const char *const root_folder)
     {
         return false;
     }
+
+    fprintf (file, "%s", content);
 
     fclose (file);
 

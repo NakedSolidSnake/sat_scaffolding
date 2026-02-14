@@ -1,0 +1,9 @@
+services:
+  development:
+    #build: .
+    image: solidcris/development
+    container_name: sat_scaffolding
+    volumes:
+    - .:/development
+    ports:
+    - "1234:1234"

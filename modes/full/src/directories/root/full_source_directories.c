@@ -59,7 +59,7 @@ bool full_source_directory_create (const char *const base_folder, const char *co
         return false;
     }
 
-    if (cmd_cmake_template_create (folder) == false)
+    if (cmd_cmake_template_create (folder, project_name) == false)
     {
         return false;
     }
