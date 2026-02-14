@@ -3,6 +3,8 @@
 
 #define FILENAME ".gitignore"
 
+static const char *const content = "build\n";
+
 bool full_root_gitignore_template_create (const char *const root_folder)
 {
     char filename [512];
@@ -15,6 +17,8 @@ bool full_root_gitignore_template_create (const char *const root_folder)
     {
         return false;
     }
+
+    fprintf (file, "%s", content);
 
     fclose (file);
     return true;

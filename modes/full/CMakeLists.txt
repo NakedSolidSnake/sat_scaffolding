@@ -1,6 +1,3 @@
-add_subdirectory (modules)
-
-
 add_library (full "")
 target_sources (full
     PRIVATE
@@ -80,12 +77,5 @@ target_include_directories (full
 
 target_link_libraries (full 
     PUBLIC
-    adapters
-    # application
-    # cmd
-    # common
-    deploy
-    # domain
-    resources
-    tools
+    shared
 )

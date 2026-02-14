@@ -1,8 +1,0 @@
-add_subdirectory (adapters)
-add_subdirectory (application)
-add_subdirectory (cmd)
-add_subdirectory (common)
-add_subdirectory (deploy)
-add_subdirectory (domain)
-add_subdirectory (resources)
-add_subdirectory (tools)

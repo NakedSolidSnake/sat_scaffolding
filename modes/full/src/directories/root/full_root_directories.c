@@ -54,7 +54,7 @@ bool full_create_project_dir (const char *const path, const char *const project_
         return false;
     }
 
-    if (full_root_cmake_template_create (folder) == false)
+    if (full_root_cmake_template_create (folder, project_name) == false)
     {
         return false;
     }
@@ -64,12 +64,12 @@ bool full_create_project_dir (const char *const path, const char *const project_
         return false;
     }
 
-    if (full_root_docker_compose_template_create (folder) == false)
+    if (full_root_docker_compose_template_create (folder, project_name) == false)
     {
         return false;
     }
 
-    if (full_root_readme_template_create (folder) == false)
+    if (full_root_readme_template_create (folder, project_name) == false)
     {
         return false;
     }
