@@ -1,4 +1,5 @@
 #include <full_adapters_directories.h>
+#include <full_adapters_templates.h>
 #include <stdio.h>
 #include <shared.h>
 
@@ -27,6 +28,41 @@ bool full_adapters_directory_create (const char *const base_folder, const char *
     };
 
     if (create_directories (&target_list) == false)
+    {
+        return false;
+    }
+
+    if (full_adapters_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (full_adapters_factory_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (full_adapters_ports_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (full_adapters_repositories_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (full_adapters_config_header_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (full_adapters_config_source_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (full_adapters_config_cmake_template_create (folder) == false)
     {
         return false;
     }

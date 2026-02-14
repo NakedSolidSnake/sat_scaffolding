@@ -1,13 +1,13 @@
-#include <full_adapters_templates.h>
+#include <application_templates.h>
 #include <stdio.h>
 
 #define FILENAME "CMakeLists.txt"
 
-bool full_adapters_factory_cmake_template_create (const char *const root_folder)
+bool application_context_cmake_template_create (const char *const root_folder)
 {
     char filename [512];
 
-    snprintf (filename, sizeof (filename), "%s/factories/%s", root_folder, FILENAME);
+    snprintf (filename, sizeof (filename), "%s/context/%s", root_folder, FILENAME);
 
     FILE *file = fopen (filename, "w");
 

@@ -1,4 +1,5 @@
 #include <full_application_directories.h>
+#include <application_templates.h>
 #include <stdio.h>
 #include <shared.h>
 
@@ -24,6 +25,36 @@ bool full_application_directory_create (const char *const base_folder, const cha
     };
 
     if (create_directories (&target_list) == false)
+    {
+        return false;
+    }
+
+    if (application_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (application_context_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (application_context_header_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (application_context_source_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (application_services_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (application_services_source_template_create (folder) == false)
     {
         return false;
     }

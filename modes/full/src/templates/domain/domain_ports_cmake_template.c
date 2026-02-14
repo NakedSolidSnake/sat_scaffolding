@@ -1,14 +1,13 @@
-#include <full_adapters_templates.h>
+#include <domain_templates.h>
 #include <stdio.h>
 
 #define FILENAME "CMakeLists.txt"
 
-bool full_adapters_factory_cmake_template_create (const char *const root_folder)
+bool domain_ports_cmake_template_create (const char *const root_folder)
 {
     char filename [512];
 
-    snprintf (filename, sizeof (filename), "%s/factories/%s", root_folder, FILENAME);
-
+    snprintf (filename, sizeof (filename), "%s/ports/%s", root_folder, FILENAME);
     FILE *file = fopen (filename, "w");
 
     if (file == NULL)

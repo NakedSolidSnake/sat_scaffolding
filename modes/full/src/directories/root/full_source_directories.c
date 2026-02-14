@@ -4,6 +4,7 @@
 #include <full_common_directories.h>
 #include <full_domain_directories.h>
 #include <full_root_templates.h>
+#include <cmd_templates.h>
 #include <stdio.h>
 #include <shared.h>
 
@@ -54,6 +55,16 @@ bool full_source_directory_create (const char *const base_folder, const char *co
     }
 
     if (full_root_cmake_source_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (cmd_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (cmd_main_template_create (folder) == false)
     {
         return false;
     }

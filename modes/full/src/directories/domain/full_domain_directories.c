@@ -1,4 +1,5 @@
 #include <full_domain_directories.h>
+#include <domain_templates.h>
 #include <stdio.h>
 #include <shared.h>
 
@@ -29,6 +30,46 @@ bool full_domain_directory_create (const char *const base_folder, const char *co
     };
 
     if (create_directories (&target_list) == false)
+    {
+        return false;
+    }
+
+    if (domain_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (domain_entities_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (domain_entities_source_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (domain_ports_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (domain_services_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (domain_services_source_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (domain_value_objects_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (domain_value_objects_source_template_create (folder) == false)
     {
         return false;
     }

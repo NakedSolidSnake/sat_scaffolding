@@ -1,4 +1,5 @@
 #include <full_common_directories.h>
+#include <common_templates.h>
 #include <stdio.h>
 #include <shared.h>
 
@@ -21,6 +22,16 @@ bool full_common_directory_create (const char *const base_folder, const char *co
     };
 
     if (create_directories (&target_list) == false)
+    {
+        return false;
+    }
+
+    if (common_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (common_source_template_create (folder) == false)
     {
         return false;
     }
