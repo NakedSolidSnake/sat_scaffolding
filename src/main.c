@@ -6,6 +6,7 @@
 #include <minimal.h>
 #include <library.h>
 #include <full.h>
+#include <workspace.h>
 
 static void print_help (const char *program_name)
 {
@@ -14,6 +15,7 @@ static void print_help (const char *program_name)
     printf ("  --full      Create a full project scaffolding\n");
     printf ("  --minimal   Create a minimal scaffolding\n");
     printf ("  --library   Create a library scaffolding\n");
+    printf ("  --workspace Create a workspace scaffolding\n");
 }
 
 int main (int argc, char *argv [])
@@ -48,6 +50,12 @@ int main (int argc, char *argv [])
         int argc_offset = 2;
 
         library_create (argv [0], argc - argc_offset, argv + argc_offset);
+    }
+    else if (strcmp (argv [1], "--workspace") == 0 || strcmp (argv [1], "-w") == 0)
+    {
+        int argc_offset = 2;
+
+        workspace_create (argv [0], argc - argc_offset, argv + argc_offset);
     }
     else
     {

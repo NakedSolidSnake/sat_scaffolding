@@ -13,6 +13,7 @@ target_link_libraries (sat_scaffolding
     minimal
     library
     full
+    workspace
 )
 
 install (TARGETS sat_scaffolding DESTINATION ${CMAKE_INSTALL_BINDIR})
