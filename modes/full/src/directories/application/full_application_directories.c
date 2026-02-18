@@ -14,8 +14,6 @@ bool full_application_directory_create (const char *const base_folder, const cha
         { .base_dir = folder, .target_dir = "context/include" },
         { .base_dir = folder, .target_dir = "context/src" },
         { .base_dir = folder, .target_dir = "services" },
-        { .base_dir = folder, .target_dir = "services/include" },
-        { .base_dir = folder, .target_dir = "services/src" },
         { .base_dir = folder, .target_dir = "tests" },
     };
 
@@ -55,17 +53,7 @@ bool full_application_directory_create (const char *const base_folder, const cha
         return false;
     }
 
-    if (application_services_source_template_create (folder) == false)
-    {
-        return false;
-    }
-
     if (application_tests_cmake_template_create (folder) == false)
-    {
-        return false;
-    }
-
-    if (application_tests_source_template_create (folder) == false)
     {
         return false;
     }

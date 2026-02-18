@@ -53,9 +53,7 @@ target_sources (full
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/application/application_context_header_template.c
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/application/application_context_source_template.c
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/application/application_services_cmake_template.c
-    ${CMAKE_CURRENT_LIST_DIR}/src/templates/application/application_services_source_template.c
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/application/application_tests_cmake_template.c
-    ${CMAKE_CURRENT_LIST_DIR}/src/templates/application/application_tests_source_template.c
 
 )
 

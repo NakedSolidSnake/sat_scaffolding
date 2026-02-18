@@ -4,7 +4,8 @@
 #define FILENAME "CMakeLists.txt"
 
 static const char *const content = 
-"create_test (my_application_test application_services)\n"
+"# Put here your tests\n"
+"# create_test (my_application_test application_services)\n"
 ;
 
 bool application_tests_cmake_template_create (const char *const root_folder)
