@@ -7,7 +7,7 @@ bool full_create (const char *application, int argc, char *argv [])
     if (argc != 2 || argv == NULL)
     {
         fprintf (stderr, "Invalid arguments for project_create\n");
-        fprintf (stderr, "Usage: %s --project <path> <project_name>\n", application);
+        fprintf (stderr, "Usage: %s --full <path> <project_name>\n", application);
         return false;
     }
 
