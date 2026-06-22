@@ -8,6 +8,7 @@ const char *const content =
 "add_subdirectory (factories)\n"
 "add_subdirectory (ports)\n"
 "add_subdirectory (repositories)\n"
+"add_subdirectory (controllers)\n"
 "\n"
 "add_library (adapters INTERFACE)\n"
 "\n"
