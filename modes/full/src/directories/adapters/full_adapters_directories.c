@@ -19,6 +19,7 @@ bool full_adapters_directory_create (const char *const base_folder, const char *
         { .base_dir = folder, .target_dir = "config/src" },
         { .base_dir = folder, .target_dir = "ports" },
         { .base_dir = folder, .target_dir = "repositories" },
+        { .base_dir = folder, .target_dir = "controllers" },
     };
 
     directory_target_list_t target_list = 
@@ -48,6 +49,11 @@ bool full_adapters_directory_create (const char *const base_folder, const char *
     }
 
     if (full_adapters_repositories_cmake_template_create (folder) == false)
+    {
+        return false;
+    }
+
+    if (full_adapters_controllers_cmake_template_create (folder) == false)
     {
         return false;
     }

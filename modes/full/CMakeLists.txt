@@ -27,6 +27,7 @@ target_sources (full
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/adapters/full_adapters_factory_cmake_template.c
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/adapters/full_adapters_ports_cmake_template.c
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/adapters/full_adapters_repositories_cmake_template.c
+    ${CMAKE_CURRENT_LIST_DIR}/src/templates/adapters/full_adapters_controllers_cmake_template.c
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/adapters/full_adapters_cmake_template.c
 
     ${CMAKE_CURRENT_LIST_DIR}/src/templates/domain/domain_cmake_template.c
