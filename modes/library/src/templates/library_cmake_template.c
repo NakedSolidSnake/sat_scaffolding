@@ -3,7 +3,7 @@
 #include <string.h>
 
 const char *library_cmake_template = 
-    "cmake_minimum_required (VERSION 4.0.3)\n"
+    "cmake_minimum_required (VERSION 3.7.0)\n"
     "project (\"%s\")\n"
     "\n"
     "set (CMAKE_C_FLAGS \"-D_GNU_SOURCE -Wall -std=c99\")\n"
